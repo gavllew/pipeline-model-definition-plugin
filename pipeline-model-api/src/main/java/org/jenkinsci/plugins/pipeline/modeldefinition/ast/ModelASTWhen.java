@@ -38,7 +38,7 @@ public class ModelASTWhen extends ModelASTElement {
 
     private List<ModelASTStep> conditions = new ArrayList<>();
 
-    ModelASTWhen(Object sourceLocation) {
+    public ModelASTWhen(Object sourceLocation) {
         super(sourceLocation);
     }
 

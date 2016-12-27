@@ -43,10 +43,10 @@ class StageConditionals implements MethodsToList<DeclarativeStageConditional>, S
         this.conditions = conditions
     }
 
-    public boolean evaluate(StepContext context, CpsScript script) {
+    public boolean evaluate(CpsScript script) {
         for (int i = 0; i < conditions.size(); i++) {
             DeclarativeStageConditional cond = conditions[i];
-            if (!cond.evaluate(context, script)) {
+            if (!cond.evaluate(script)) {
                 return false
             }
         }
