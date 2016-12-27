@@ -52,7 +52,7 @@ public class StageConditionalTranslator implements MethodMissingWrapper, Seriali
 
         DeclarativeStageConditionalDescriptor descriptor = DeclarativeStageConditionalDescriptor.byName(s)
         if (descriptor == null) {
-            throw new NoSuchMethodError(Messages.ModelValidator_ModelASTWhen_unknown(s, DeclarativeStageConditionalDescriptor.allNames().join(", ")))
+            throw new NoSuchMethodError(Messages.ModelValidatorImpl_UnknownWhen(s, DeclarativeStageConditionalDescriptor.allNames().join(", ")))
         }
 
         def instance = descriptor.newInstance(args) //TODO args probably needs to be massaged somehow, see org.jenkinsci.plugins.workflow.cps.DSL.parseArgs(java.lang.Object, boolean, java.lang.String, boolean) for inspiration
